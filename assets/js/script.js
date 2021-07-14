@@ -18,8 +18,8 @@ function generatePassword() {
   // Gets length of password, requires it to be at least 8 digits
   var passLength = prompt('How long do you want your password to be?');
 
-  if (passLength < 8) {
-    alert('Password must be at least 8 digits');
+  if (128 < passLength < 8) {
+    alert('Password must be at least 8 digits but no more than 128');
     generatePassword();
     return;
   }
